@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot Switcher</title>
+</head>
+<body>
+    <iframe id="chatbot-frame" style="width: 100%; height: 600px; border: none;"></iframe>
+    
+    <button onclick="switchChatbot(urls.bot1)">Bot 1</button>
+    <button onclick="switchChatbot(urls.bot2)">Bot 2</button>
+
+    <script>
+        const urls = {
+            bot1: 'https://app.rapidbott.cloud/p/web/daxni8hcfsnucb8p/embed?ref=wf145035w76219',
+            bot2: 'https://app.rapidbott.cloud/p/web/daxni8hcfsnucb8p/embed?ref=wf145035w76229'
+        };
+
+        function switchChatbot(url) {
+            document.getElementById('chatbot-frame').src = url;
+        }
+
+        // Load initial chatbot
+        switchChatbot(urls.bot1);
+    </script>
+</body>
+</html>
